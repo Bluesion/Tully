@@ -1,0 +1,34 @@
+<resources>
+    <string-array name="cleaner_filter_files">
+        <item>.tmp</item>
+        <item>.log</item>
+        <item>.exo</item>
+        <item>thumbs?.db</item>
+    </string-array>
+
+    <string-array name="cleaner_filter_folders">
+        <item>Logs</item>
+        <item>logs</item>
+        <item>temp</item>
+        <item>Temporary</item>
+        <item>temporary</item>
+        <item>supersonicads</item>
+        <item>Cache</item>
+        <item>Analytics</item>
+        <item>thumbnails?</item>
+        <item>mobvista</item>
+        <item>UnityAdsVideoCache</item>
+        <item>albumthumbs?</item>
+        <item>LOST.DIR</item>
+        <item>.Trash</item>
+        <item>desktop.ini</item>
+        <item>leakcanary</item>
+        <item>.DS_Store</item>
+        <item>.spotlight-V100</item>
+        <item>fseventsd</item>
+        <item>Bugreport</item>
+        <item>bugreports</item>
+        <item>.Trash</item>
+        <item>cache</item>
+    </string-array>
+</resources>

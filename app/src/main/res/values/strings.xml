@@ -1,0 +1,39 @@
+<resources>
+    <!-- Device Editor -->
+    <string name="device_editor">Device Editor</string>
+    <string name="device_editor_description">Device Editor helps you to change device settings.</string>
+    <string name="device_editor_search_bar">Search key</string>
+    <string name="device_editor_key">Key</string>
+    <string name="device_editor_value">Value</string>
+    <string name="device_editor_dialog_save">Save</string>
+    <string name="device_editor_dialog_delete">Delete</string>
+    <string name="device_editor_dialog_add">Add new setting</string>
+    <string name="device_editor_permission_title">Permission required</string>
+    <string name="device_editor_permission_text">To use Device Editor, you need to do 2 things first.</string>
+    <string name="device_editor_permission_adb_title">1. Grant permission using ADB</string>
+    <string name="device_editor_permission_adb_command" translatable="false">adb shell pm grant com.bluesion.tully android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="device_editor_permission_settings_title">2. Grant permission in Settings</string>
+    <string name="device_editor_permission_settings_button">Open Settings</string>
+
+    <!-- Cleaner -->
+    <string name="cleaner">Cleaner</string>
+    <string name="cleaner_description">Cleaner helps your device\'s storage clean.</string>
+    <string name="cleaner_permission_title">Permission required</string>
+    <string name="cleaner_common_permission_description">Tully needs the storage permission to clean your device.</string>
+    <string name="cleaner_common_permission_settings_button">Open Settings</string>
+    <string name="cleaner_above_r_permission_description">Because of Android policy, a special permission is required to use Cleaner.</string>
+    <string name="cleaner_above_r_permission_settings_button">Open Settings</string>
+    <string name="cleaner_scan_button">Scan</string>
+    <string name="cleaner_scanning">Scanning…</string>
+    <string name="cleaner_scan_complete">Scan complete!</string>
+    <string name="cleaner_scan_fail">Scan failed!</string>
+    <string name="cleaner_clean">Clean\n%d stuffs (%s)</string>
+    <string name="cleaner_close">Close</string>
+    <string name="cleaner_cleaning">Cleaning…</string>
+    <string name="cleaner_clean_complete">Clean complete!</string>
+
+    <!-- Settings -->
+    <string name="settings_cleaner_corpse_title">Delete corpse files</string>
+    <string name="settings_cleaner_corpse_summary">Files left over from uninstalled apps</string>
+    <string name="settings_cleaner_apk">Delete .apk files</string>
+</resources>

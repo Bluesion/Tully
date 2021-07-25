@@ -1,0 +1,16 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.preference.PreferenceCategory android:title="@string/cleaner">
+        <CheckBoxPreference
+            android:title="@string/settings_cleaner_corpse_title"
+            android:summary="@string/settings_cleaner_corpse_summary"
+            android:defaultValue="true"
+            android:key="cleaner_corpse" />
+
+        <CheckBoxPreference
+            android:title="@string/settings_cleaner_apk"
+            android:defaultValue="true"
+            android:key="cleaner_apk" />
+    </androidx.preference.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

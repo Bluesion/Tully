@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bluesion.tully">
+
+    <uses-feature android:name="android.software.device_admin" />
+    <uses-feature android:name="android.software.managed_users" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".TullyApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:banner="@mipmap/ic_launcher"
+        android:theme="@style/Theme.Tully"
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="false">
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".appswitch.AppSwitchActivity"
+            android:theme="@style/Theme.Tully.AppSwitch"
+            android:label="@string/app_switch" />
+        <activity
+            android:name=".cleaner.CleanerActivity"
+            android:theme="@style/Theme.Tully.Cleaner"
+            android:label="@string/cleaner" />
+        <activity
+            android:name=".deviceeditor.DeviceEditorActivity"
+            android:theme="@style/Theme.Tully.DeviceEditor"
+            android:label="@string/device_editor" />
+        <activity
+            android:name=".settings.AboutActivity"
+            android:label="@string/settings_about" />
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/settings" />
+        <activity
+            android:name=".thermometer.ThermometerActivity"
+            android:theme="@style/Theme.Tully.Thermometer"
+            android:label="@string/thermometer" />
+        <receiver android:name=".TullyAdmin"
+            android:label="@string/tully_admin"
+            android:description="@string/tully_admin_description"
+            android:permission="android.permission.BIND_DEVICE_ADMIN"
+            android:exported="true">
+            <meta-data android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+    </application>
+</manifest>
